@@ -1,5 +1,3 @@
-# $Rev: 3344 $, $Date: 2005-08-27 17:42:47 $
-#
 Summary:	fstobdf application
 Summary(pl):	Aplikacja fstobdf
 Name:		xorg-app-fstobdf
@@ -17,10 +15,7 @@ BuildRequires:	xorg-lib-libFS-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	pkgconfig >= 0.19
-BuildRoot:	%{tmpdir}/fstobdf-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 fstobdf application.
@@ -28,11 +23,9 @@ fstobdf application.
 %description -l pl
 Aplikacja fstobdf.
 
-
 %prep
 %setup -q -n fstobdf-%{version}
 %patch0 -p1
-
 
 %build
 %{__aclocal}
@@ -43,17 +36,14 @@ Aplikacja fstobdf.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %files
 %defattr(644,root,root,755)
