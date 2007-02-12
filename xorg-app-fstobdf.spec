@@ -1,5 +1,5 @@
 Summary:	fstobdf application
-Summary(pl.UTF-8):   Aplikacja fstobdf
+Summary(pl.UTF-8):	Aplikacja fstobdf
 Name:		xorg-app-fstobdf
 Version:	1.0.2
 Release:	1
