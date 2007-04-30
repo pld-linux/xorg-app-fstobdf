@@ -1,5 +1,5 @@
-Summary:	fstobdf application
-Summary(pl.UTF-8):	Aplikacja fstobdf
+Summary:	fstobdf application - generate BDF font from X font server
+Summary(pl.UTF-8):	Aplikacja fstobdf - generowanie fontów BDF z serwera fontów X
 Name:		xorg-app-fstobdf
 Version:	1.0.2
 Release:	1
@@ -17,10 +17,16 @@ BuildRequires:	xorg-util-util-macros >= 0.99.2
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-fstobdf application.
+The fstobdf program reads a font from X font server and prints a BDF
+file on the standard output that may be used to recreate the font.
+This is useful in testing servers, debugging font metrics, and
+reproducing lost BDF files.
 
 %description -l pl.UTF-8
-Aplikacja fstobdf.
+Program fstobdf czyta font z serwera fontów X i wypisuje na
+standardowe wyjście plik BDF, który może służyć do odtworzenia fontu.
+Jest to przydatne do testowania serwerów, diagnostyki metryk fontów i
+odzyskiwania utraconych plików BDF.
 
 %prep
 %setup -q -n fstobdf-%{version}
