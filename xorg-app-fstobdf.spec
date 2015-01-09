@@ -1,19 +1,19 @@
 Summary:	fstobdf application - generate BDF font from X font server
 Summary(pl.UTF-8):	Aplikacja fstobdf - generowanie fontów BDF z serwera fontów X
 Name:		xorg-app-fstobdf
-Version:	1.0.5
+Version:	1.0.6
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/fstobdf-%{version}.tar.bz2
-# Source0-md5:	c536ac53e51df0a28e764a7cf7ef4924
+# Source0-md5:	0fde522c0d2b44ba3eb535183fdd536a
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libFS-devel
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-proto-xproto-devel >= 7.0.17
+BuildRequires:	xorg-proto-xproto-devel >= 7.0.25
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -54,4 +54,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/fstobdf
-%{_mandir}/man1/fstobdf.1x*
+%{_mandir}/man1/fstobdf.1*
